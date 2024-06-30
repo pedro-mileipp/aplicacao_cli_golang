@@ -1,40 +1,116 @@
-# **Aplicação CLI em Go (Golang)**
 
-<br>
-<br>
+# Aplicação de Linha de Comando em Go (Golang)
 
-## Olá pessoal,
+## Descrição
 
-- Quero compartilhar com vocês uma aplicação CLI incrível desenvolvida como tema do trabalho da matéria de Redes de Computadores em Go (Golang). Esta aplicação é capaz de coletar o endereço IP ou o servidor de um site inserido, dependendo da flag utilizada na execução.
+Esta é uma aplicação CLI (Command Line Interface) desenvolvida em Go (Golang) que permite buscar endereços IP e nomes de servidores (NS) de um domínio especificado. Utiliza a biblioteca `net` para realizar essas buscas de forma eficiente.
 
-- Gupo do trabalho: Pedro Milleip, João Gabriel Otogali e Vinicius Gomes.
+## Funcionalidades
 
-- O Go é uma linguagem de programação de código aberto que se tornou muito popular nos últimos anos devido à sua eficiência e simplicidade. Com ele, é possível criar aplicações poderosas e robustas, capazes de lidar com tarefas complexas e de alto desempenho.
+- **Buscar endereços IP**: Através do comando `ip`, a aplicação retorna os endereços IP associados a um domínio.
+- **Buscar servidores de nomes**: Através do comando `servers`, a aplicação retorna os servidores de nomes (NS) associados a um domínio.
 
-- A aplicação CLI em Go utiliza a biblioteca "net" para coletar informações sobre o site inserido. Através da flag "ip", a aplicação retorna o endereço IP correspondente ao site informado. Já com a flag "servers", a aplicação retorna o servidor utilizado pelo site.
+## Estrutura do Projeto
 
-- O processo é muito simples e fácil de executar. Basta baixar o código-fonte da aplicação, compilar e executar com a flag desejada. Com apenas alguns comandos no terminal, é possível obter informações valiosas sobre qualquer site.
-
-- Um abraço a todos!
-
-<br>
-
-## Exemplo de funcionamento
-```bash
-./linha-de-comando ip --host stackoverflow.com
-151.101.193.69
-151.101.1.69
-151.101.65.69
-151.101.129.69
+```
+golang-cli-application/
+├── main.go
+├── app/
+│   └── app.go
+├── README.md
+└── linha-de-comando.exe
 ```
 
+- `main.go`: Arquivo principal que inicializa e executa a aplicação.
+- `app/app.go`: Contém a lógica da aplicação e os comandos CLI.
+- `linha-de-comando.exe`: Executável pré-compilado disponível para uso imediato.
 
+## Instalação
 
+### Pré-requisitos
 
-```bash
-./linha-de-comando servers --host stackoverflow.com
-ns-358.awsdns-44.com.
-ns-cloud-e1.googledomains.com.
-ns-1033.awsdns-01.org.
-ns-cloud-e2.googledomains.com.
-```
+- [Go](https://golang.org/dl/) instalado no seu sistema.
+
+### Passos
+
+1. Clone o repositório:
+
+    ```sh
+    git clone https://github.com/pedro-mileipp/golang-cli-application.git
+    cd golang-cli-application
+    ```
+
+2. Compile o código:
+
+    ```sh
+    go build -o linha-de-comando
+    ```
+
+3. Execute a aplicação com a flag desejada:
+
+    ```sh
+    ./linha-de-comando ip --host <NOME_DO_SITE>
+    ./linha-de-comando servers --host <NOME_DO_SITE>
+    ```
+
+## Uso do Executável Pré-Compilado
+
+Caso você não queira compilar o código, pode usar o executável pré-compilado disponível no repositório.
+
+### Passos
+
+1. Baixe o executável:
+
+    ```sh
+    curl -O https://github.com/pedro-mileipp/golang-cli-application/raw/main/linha-de-comando.exe
+    ```
+
+2. Execute o executável com a flag desejada:
+
+    ```sh
+    ./linha-de-comando.exe ip --host <NOME_DO_SITE>
+    ./linha-de-comando.exe servers --host <NOME_DO_SITE>
+    ```
+
+## Exemplos de Uso
+
+- Buscar IPs do domínio `stackoverflow.com`:
+
+    ```sh
+    ./linha-de-comando ip --host stackoverflow.com
+    ```
+
+    Saída:
+
+    ```
+    151.101.193.69
+    151.101.1.69
+    151.101.65.69
+    151.101.129.69
+    ```
+
+- Buscar servidores de nomes do domínio `stackoverflow.com`:
+
+    ```sh
+    ./linha-de-comando servers --host stackoverflow.com
+    ```
+
+    Saída:
+
+    ```
+    ns-358.awsdns-44.com.
+    ns-cloud-e1.googledomains.com.
+    ns-1033.awsdns-01.org.
+    ns-cloud-e2.googledomains.com.
+    ```
+
+## Contato
+
+Para dúvidas ou sugestões:
+
+- Pedro Mileipp: [seuemail@exemplo.com](mailto:seuemail@exemplo.com)
+- LinkedIn: [https://www.linkedin.com/in/pedro-mileipp/](https://www.linkedin.com/in/pedro-mileipp/)
+
+---
+
+Esta documentação fornece uma visão detalhada do projeto, incluindo como ele funciona, como utilizá-lo e exemplos de sua execução.
