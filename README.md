@@ -103,14 +103,6 @@ Caso você não queira compilar o código, pode usar o executável pré-compilad
     ns-1033.awsdns-01.org.
     ns-cloud-e2.googledomains.com.
     ```
-
-## Contato
-
-Para dúvidas ou sugestões:
-
-- Pedro Mileipp: [seuemail@exemplo.com](mailto:seuemail@exemplo.com)
-- LinkedIn: [https://www.linkedin.com/in/pedro-mileipp/](https://www.linkedin.com/in/pedro-mileipp/)
-
----
+    
 
 Esta documentação fornece uma visão detalhada do projeto, incluindo como ele funciona, como utilizá-lo e exemplos de sua execução.
