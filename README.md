@@ -7,6 +7,8 @@
 
 - Quero compartilhar com vocês uma aplicação CLI incrível desenvolvida como tema do trabalho da matéria de Redes de Computadores em Go (Golang). Esta aplicação é capaz de coletar o endereço IP ou o servidor de um site inserido, dependendo da flag utilizada na execução.
 
+- Gupo do trabalho: Pedro Milleip, João Gabriel Otogali e Vinicius Gomes.
+
 - O Go é uma linguagem de programação de código aberto que se tornou muito popular nos últimos anos devido à sua eficiência e simplicidade. Com ele, é possível criar aplicações poderosas e robustas, capazes de lidar com tarefas complexas e de alto desempenho.
 
 - A aplicação CLI em Go utiliza a biblioteca "net" para coletar informações sobre o site inserido. Através da flag "ip", a aplicação retorna o endereço IP correspondente ao site informado. Já com a flag "servers", a aplicação retorna o servidor utilizado pelo site.
