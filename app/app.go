@@ -38,6 +38,7 @@ func Executar() *cli.App {
 	return app
 }
 
+// Função associada ao comando ip que busca e imprime os endereços IP associados ao host fornecido. 
 func buscarIps(c *cli.Context) {
 	host := c.String("host")
 
@@ -51,6 +52,7 @@ func buscarIps(c *cli.Context) {
 	}
 }
 
+//Função associada ao comando servers que busca e imprime os servidores de nomes associados ao host fornecido.
 func buscarServers(c *cli.Context){
 	host := c.String("host")
 	servers, erro := net.LookupNS(host) // name server
